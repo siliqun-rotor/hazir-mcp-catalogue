@@ -1,0 +1,40 @@
+{
+  "overlay_schema": "hazir.catalogue.overlay/1",
+  "stable_id": "example.demo-mcp",
+  "upstream": {
+    "namespace_name": "io.github.example/demo-mcp",
+    "source_kind": "authored_fixture",
+    "schema_id": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "raw_record_digest_sha256": "752980ccce105d2fb20e1d6969a5e5726c29ec212ec1736cf836b602b8d6d82f"
+  },
+  "presentation": {
+    "title": "Demo MCP",
+    "categories": [
+      "fixture"
+    ],
+    "maintainer_class": "community",
+    "public_docs_url": "https://example.invalid/docs"
+  },
+  "compatibility": {
+    "hosting_modes": {
+      "customer_remote_streamable_http": "compatible",
+      "customer_remote_sse": "unsupported",
+      "hosted_stdio": "unsupported",
+      "own_engine_package": "unknown"
+    },
+    "auth_modes": [
+      "oauth2.1_pkce",
+      "bearer_opaque"
+    ],
+    "event_sources": []
+  },
+  "lifecycle": {
+    "upstream_status": "active",
+    "hazir_status": "listed_candidate"
+  },
+  "prohibitions": {
+    "no_secrets_in_manifest": true,
+    "no_self_asserted_readiness": true,
+    "no_self_asserted_verified_publisher": true
+  }
+}

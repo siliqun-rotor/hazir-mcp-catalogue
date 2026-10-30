@@ -1,0 +1,39 @@
+{
+  "overlay_schema": "hazir.catalogue.overlay/1",
+  "stable_id": "example.calendar-desk",
+  "upstream": {
+    "namespace_name": "io.github.example/calendar-desk",
+    "source_kind": "authored_fixture",
+    "schema_id": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "raw_record_digest_sha256": "synthetic-calendar-desk-fixture-not-upstream-fetched"
+  },
+  "presentation": {
+    "title": "Booking Calendar Desk",
+    "categories": [
+      "scheduling",
+      "fixture"
+    ],
+    "maintainer_class": "community",
+    "public_docs_url": "https://example.invalid/calendar"
+  },
+  "compatibility": {
+    "hosting_modes": {
+      "customer_remote_streamable_http": "compatible",
+      "customer_remote_sse": "compatible",
+      "hosted_stdio": "unsupported",
+      "own_engine_package": "unknown"
+    },
+    "auth_modes": [
+      "oauth2.1_pkce"
+    ]
+  },
+  "lifecycle": {
+    "upstream_status": "active",
+    "hazir_status": "listed_candidate"
+  },
+  "prohibitions": {
+    "no_secrets_in_manifest": true,
+    "no_self_asserted_readiness": true,
+    "no_self_asserted_verified_publisher": true
+  }
+}

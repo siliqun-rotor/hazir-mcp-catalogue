@@ -1,0 +1,16 @@
+{
+  "gate": "G-14",
+  "task": "T-801",
+  "outcome": "pass",
+  "platform": "stage-fixture",
+  "scope": "fixture_catalogue_only",
+  "revision_id": "hazir-mcp-catalogue-r1-initial-fixture",
+  "content_digest": "a8c67c5bde5ac4ce6ee531e22437b147b21458c79e72d1d169421c891f194b6c",
+  "entry_digests": {
+    "example.demo-mcp": "54e2b7770c84603e568be38a317c6cd2d6ccb6088ee835c3731edc79d08417dd",
+    "example.calendar-desk": "75991a1beb6c522bbe314b1f04393f4934b9590c87b86d5f60f7c6f820dfac45"
+  },
+  "predecessor_id": null,
+  "production_publish": false,
+  "notes": "Accepted initial fixture catalogue under owner execute-open-items; not DNS/billing/live-provider activation"
+}
