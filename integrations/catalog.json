@@ -1,0 +1,31 @@
+{
+  "format": "siliqun-marketplace-catalog/1",
+  "entries": [
+    {
+      "id": "sqr-jira-bundle",
+      "name": "jira-cloud",
+      "displayName": "Jira Cloud",
+      "version": "1.0.0",
+      "author": "Siliqun Rotor Community",
+      "license": "Apache-2.0",
+      "description": "Siliqun Rotor Integration Bundle for Jira Cloud",
+      "category": "Integrations",
+      "repoUrl": "https://github.com/siliqun-rotor/sqr-jira-bundle",
+      "bundleUrl": "https://raw.githubusercontent.com/siliqun-rotor/sqr-jira-bundle/18703e2df574ba55cded900f0d75e0b099d0f1c0/dist/ef7da9c2c98f16c7e9578e76183ca56a5a33178b2aba727b8853956f19bfcc5a.sqr-bundle.zip",
+      "bundleSha256": "ef7da9c2c98f16c7e9578e76183ca56a5a33178b2aba727b8853956f19bfcc5a",
+      "archiveSha256": "2a2deeb27d869bae1860b3743572a612c1e57efa1484f5081275fbe5a86a05aa",
+      "toolsCount": 3,
+      "downloadsCount": 0,
+      "tags": [
+        "Studio",
+        "Vault",
+        "portable"
+      ],
+      "sourceRevision": "18703e2df574ba55cded900f0d75e0b099d0f1c0",
+      "provenance": {
+        "documentationUrl": "https://dac-static.atlassian.com/cloud/jira/platform/swagger-v3.v3.json?_v=1.8516.152",
+        "documentationSha256": "2a7438c5feaa1fab2e64699cf3ed1b45685af3da356dbb987b216cd98adc12d0"
+      }
+    }
+  ]
+}
