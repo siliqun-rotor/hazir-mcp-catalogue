@@ -28,6 +28,32 @@
         "documentationUrl": "https://dac-static.atlassian.com/cloud/jira/platform/swagger-v3.v3.json?_v=1.8516.152",
         "documentationSha256": "2a7438c5feaa1fab2e64699cf3ed1b45685af3da356dbb987b216cd98adc12d0"
       }
+    },
+    {
+      "id": "slack-web-api",
+      "name": "slack-web-api",
+      "displayName": "Slack briefing actions",
+      "version": "1.0.0",
+      "author": "Siliqun Rotor Community",
+      "license": "Apache-2.0",
+      "description": "Connect your own Slack account through Vault. Choose identity checks, public channel listing, approved message delivery and readback. No workspace or channel is bundled.",
+      "category": "Integrations",
+      "repoUrl": "https://github.com/siliqun-rotor/hazir-mcp-catalogue/tree/85f2eea2c7e355cb68274d42891b77c7c6ad342e/bundles/slack-web-api",
+      "bundleUrl": "https://raw.githubusercontent.com/siliqun-rotor/hazir-mcp-catalogue/85f2eea2c7e355cb68274d42891b77c7c6ad342e/dist/295bb44e025c97bb44a23187ac89d597b4d1bdfedfcafe3fc958aa2705c193fb.sqr-bundle.zip",
+      "bundleSha256": "295bb44e025c97bb44a23187ac89d597b4d1bdfedfcafe3fc958aa2705c193fb",
+      "archiveSha256": "179b7fd673262c2333b6cfa01958818391334ff66cd214eefc7c36eb4757db5f",
+      "toolsCount": 4,
+      "downloadsCount": 0,
+      "tags": [
+        "Vault",
+        "portable",
+        "briefing"
+      ],
+      "sourceRevision": "85f2eea2c7e355cb68274d42891b77c7c6ad342e",
+      "provenance": {
+        "documentationUrl": "https://docs.slack.dev/reference/methods/chat.postMessage/",
+        "evidence": "bundles/slack-web-api/README.md"
+      }
     }
   ]
 }
