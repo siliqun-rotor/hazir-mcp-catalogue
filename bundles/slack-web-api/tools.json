@@ -1,0 +1,252 @@
+[
+  {
+    "type": "function",
+    "effect": "read",
+    "result_script": "(if (= (get input :ok) true) input (fail \"Slack did not confirm success. Review the connection and response before retrying.\"))",
+    "function": {
+      "name": "slack_auth_test",
+      "description": "Check the connected Slack workspace and identity.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "_meta": {
+      "sqr/http": {
+        "method": "POST",
+        "path": "/auth.test",
+        "server": "https://slack_api.invalid",
+        "query_params": [],
+        "header_params": [],
+        "authentication": {
+          "format": "siliqun-authentication/1",
+          "slot": "slack_api",
+          "bindingKey": "slack_api",
+          "endpointRequired": true,
+          "schemes": {
+            "slackToken": {
+              "type": "http",
+              "scheme": "bearer",
+              "description": "A customer Slack app token with workspace and channel access."
+            }
+          },
+          "requirements": [
+            {
+              "slackToken": []
+            }
+          ]
+        },
+        "body": {
+          "from": []
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "effect": "read",
+    "result_script": "(if (= (get input :ok) true) input (fail \"Slack did not confirm success. Review the connection and response before retrying.\"))",
+    "function": {
+      "name": "slack_channels_list",
+      "description": "List accessible public channels; follow the returned cursor.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "Channels per page.",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "cursor": {
+            "type": "string",
+            "description": "Next page cursor."
+          },
+          "types": {
+            "type": "string",
+            "description": "Conversation types.",
+            "enum": [
+              "public_channel"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "_meta": {
+      "sqr/http": {
+        "method": "GET",
+        "path": "/conversations.list",
+        "server": "https://slack_api.invalid",
+        "query_params": [
+          "limit",
+          "cursor",
+          "types"
+        ],
+        "header_params": [],
+        "authentication": {
+          "format": "siliqun-authentication/1",
+          "slot": "slack_api",
+          "bindingKey": "slack_api",
+          "endpointRequired": true,
+          "schemes": {
+            "slackToken": {
+              "type": "http",
+              "scheme": "bearer",
+              "description": "A customer Slack app token with workspace and channel access."
+            }
+          },
+          "requirements": [
+            {
+              "slackToken": [
+                "channels:read"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "effect": "act",
+    "result_script": "(if (= (get input :ok) true) input (fail \"Slack did not confirm success. Review the connection and response before retrying.\"))",
+    "function": {
+      "name": "slack_post_message",
+      "description": "Send the exact approved briefing to the selected conversation.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "description": "Customer-selected conversation ID."
+          },
+          "text": {
+            "type": "string",
+            "description": "Exact approved message.",
+            "minLength": 1,
+            "maxLength": 4000
+          }
+        },
+        "required": [
+          "channel",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "_meta": {
+      "sqr/http": {
+        "method": "POST",
+        "path": "/chat.postMessage",
+        "server": "https://slack_api.invalid",
+        "query_params": [],
+        "header_params": [],
+        "authentication": {
+          "format": "siliqun-authentication/1",
+          "slot": "slack_api",
+          "bindingKey": "slack_api",
+          "endpointRequired": true,
+          "schemes": {
+            "slackToken": {
+              "type": "http",
+              "scheme": "bearer",
+              "description": "A customer Slack app token with workspace and channel access."
+            }
+          },
+          "requirements": [
+            {
+              "slackToken": [
+                "chat:write"
+              ]
+            }
+          ]
+        },
+        "body": {
+          "from": [
+            "channel",
+            "text"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "effect": "read",
+    "result_script": "(if (= (get input :ok) true) input (fail \"Slack did not confirm success. Review the connection and response before retrying.\"))",
+    "function": {
+      "name": "slack_channel_history",
+      "description": "Read recent public channel messages to verify delivery.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "description": "Public channel ID."
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Messages per page.",
+            "minimum": 1,
+            "maximum": 15
+          },
+          "oldest": {
+            "type": "string",
+            "description": "Start timestamp."
+          },
+          "latest": {
+            "type": "string",
+            "description": "End timestamp."
+          },
+          "inclusive": {
+            "type": "boolean",
+            "description": "Include boundaries."
+          }
+        },
+        "required": [
+          "channel"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "_meta": {
+      "sqr/http": {
+        "method": "GET",
+        "path": "/conversations.history",
+        "server": "https://slack_api.invalid",
+        "query_params": [
+          "channel",
+          "limit",
+          "oldest",
+          "latest",
+          "inclusive"
+        ],
+        "header_params": [],
+        "authentication": {
+          "format": "siliqun-authentication/1",
+          "slot": "slack_api",
+          "bindingKey": "slack_api",
+          "endpointRequired": true,
+          "schemes": {
+            "slackToken": {
+              "type": "http",
+              "scheme": "bearer",
+              "description": "A customer Slack app token with workspace and channel access."
+            }
+          },
+          "requirements": [
+            {
+              "slackToken": [
+                "channels:history"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
