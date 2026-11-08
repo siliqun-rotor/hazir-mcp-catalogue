@@ -36,7 +36,9 @@
             {
               "slackToken": []
             }
-          ]
+          ],
+          "title": "Slack account",
+          "suggestedEndpoint": "https://slack.com/api"
         },
         "body": {
           "from": []
@@ -105,7 +107,9 @@
                 "channels:read"
               ]
             }
-          ]
+          ],
+          "title": "Slack account",
+          "suggestedEndpoint": "https://slack.com/api"
         }
       }
     }
@@ -163,7 +167,9 @@
                 "chat:write"
               ]
             }
-          ]
+          ],
+          "title": "Slack account",
+          "suggestedEndpoint": "https://slack.com/api"
         },
         "body": {
           "from": [
@@ -244,7 +250,9 @@
                 "channels:history"
               ]
             }
-          ]
+          ],
+          "title": "Slack account",
+          "suggestedEndpoint": "https://slack.com/api"
         }
       }
     }

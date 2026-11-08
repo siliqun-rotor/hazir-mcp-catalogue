@@ -1,6 +1,6 @@
 {
-  "archive": "dist/ff01fc7430df3dded90038811dc7b9b55fccac115e9578a6d295bdcae770de32.sqr-bundle.zip",
-  "bundleSha256": "ff01fc7430df3dded90038811dc7b9b55fccac115e9578a6d295bdcae770de32",
-  "archiveSha256": "eb529e2ab6108f69cb5a09d2481964efc550a0e2dfb89372c63eadb11e227e76",
+  "archive": "dist/295bb44e025c97bb44a23187ac89d597b4d1bdfedfcafe3fc958aa2705c193fb.sqr-bundle.zip",
+  "bundleSha256": "295bb44e025c97bb44a23187ac89d597b4d1bdfedfcafe3fc958aa2705c193fb",
+  "archiveSha256": "179b7fd673262c2333b6cfa01958818391334ff66cd214eefc7c36eb4757db5f",
   "toolsCount": 4
 }
